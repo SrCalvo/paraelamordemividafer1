@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrusel de fotos</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+</head>
+<body>
+  <div class="contenedor-carrusel">
+    <div class="carrusel">
+      <img src="/img/01.jpg" alt="Imagen 1">
+      <img src="/img/02.jpg" alt="Imagen 2">
+      <img src="/img/03.jpg" alt="Imagen 3">
+      <img src="/img/04.jpg" alt="Imagen 4">
+      <img src="/img/05.jpg" alt="Imagen 5">
+    </div>
+    <button class="flecha-izquierda">‹</button>
+    <button class="flecha-derecha">›</button>
+  </div>
+  <script>
+    $('.carrusel').slick({
+      arrows: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        }
+      ]
+    });
+  </script>
+</body>
+</html>
